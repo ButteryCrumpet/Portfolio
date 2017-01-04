@@ -1,0 +1,28 @@
+/* Sticky footer styles stolen from codeschool
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+}
+.footer {
+  color: #efefef;
+  background-color: #333;
+}
+.footer a {
+  color: #9af7fe;
+}
+@media only screen and (max-width: 768px) {
+  body { margin-bottom: 400px; }
+  .footer { height: 400px; }
+}
