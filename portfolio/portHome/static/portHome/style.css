@@ -1,15 +1,70 @@
 /* Sticky footer styles stolen from codeschool
 -------------------------------------------------- */
-html {
+html, body {
   position: relative;
   min-height: 100%;
+  margin:0;
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 200px;
 }
+
+html>body .content {
+  height: auto;
+}
+
+h1,h2,h3 {
+  font-family: Lora, serif;
+}
+
+p, a {
+  font-family: Lato, sans-serif;
+}
+
+.content {
+  height:100%;
+  min-height:100%;/*for mozilla*/
+}
+
+.navbar-static-top {
+  position:absolute;
+  background: transparent;
+  width: 80vw;
+}
+
+.jumbotron {
+  background: transparent;
+}
+
+#fullscreen-home {
+  background: url(http://codecondo.com/wp-content/uploads/2014/04/12-Courses-for-Starting-Your-Web-Development-Journey.jpg?478983) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.parallax {
+  background-image: url(http://bigl.es/content/images/2015/05/circuit.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+
+/*centres content perfectly with flexing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  color: white;
+}
+
+.section-description {
+  height: 25%;
+}
+
+.project {
+  height: 25%;
+  background-color: #E5F9E0;
+}
+
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -21,8 +76,4 @@ body {
 }
 .footer a {
   color: #9af7fe;
-}
-
-.navbar-static-top {
-  margin-bottom: 20px;
 }
