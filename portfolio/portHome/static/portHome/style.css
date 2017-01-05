@@ -14,11 +14,11 @@ html>body .content {
 }
 
 h1,h2,h3 {
-  font-family: Lora, serif;
+  font-family: "Leto";
 }
 
 p, a {
-  font-family: Lato, sans-serif;
+  font-family: "Lora";
 }
 
 .content {
@@ -32,21 +32,31 @@ p, a {
   width: 80vw;
 }
 
-.jumbotron {
-  background: transparent;
+#fullscreen-home {
+  background: url(http://www.desktopwallpaperhd.net/wallpapers/13/4/wallpapers-computer-forest-bamboo-plant-eeddbc-135604.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#fullscreen-home {
-  background: url(http://codecondo.com/wp-content/uploads/2014/04/12-Courses-for-Starting-Your-Web-Development-Journey.jpg?478983) no-repeat center center fixed;
-  background-size: cover;
+#welcome-message {
+  color: white;
+}
+
+#frontend {
+  background-image: url(http://janeto.com/img/slides/responsive.jpg);
+}
+
+#backend {
+  background-image: url(https://2.bp.blogspot.com/-QbtuODo_9Dw/VvBFDmQOorI/AAAAAAAAAHk/wSxISxtzFx48uLvlTnIxQiWdn7d1FNhZg/s1600/linux_file_system.png);
 }
 
 .parallax {
-  background-image: url(http://bigl.es/content/images/2015/05/circuit.jpg);
   background-attachment: fixed;
   background-size: cover;
 
-/*centres content perfectly with flexing */
+  /*centres content perfectly with flexing */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +69,17 @@ p, a {
   height: 25%;
 }
 
+.projects {
+  list-style: none;
+}
+
 .project {
   height: 25%;
-  background-color: #E5F9E0;
+  border: 10px black;
+}
+
+.project img {
+
 }
 
 .footer {
@@ -77,3 +95,8 @@ p, a {
 .footer a {
   color: #9af7fe;
 }
+
+
+a[ id= "frontend-link" ]:target ~ #frontend {
+    -webkit-transform: translateY( -1000px);
+    transform: translateY( -1000px );

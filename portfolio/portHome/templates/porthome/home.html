@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i" rel="stylesheet">
 
 
-<header class='nav navbar-default navbar-static-top' role='navigation'>
+<header class='nav navbar-inverse navbar-static-top' role='navigation'>
     <div class='navbar-header'>
       <a href='#' class='nav navbar-brand'>Me</a>
     </div>
@@ -17,42 +17,41 @@
 </header>
 
 <section id='fullscreen-home' class='content'>
-  <div class='jumbotron'>
+  <div id='welcome-message'  class='col-md-10 col-md-offset-2'>
     <h1>PanDev</h1>
     <p class='lead'>Pan-development. Fullstack developer</p>
   </div>
 </section>
 
-
-<div class='parallax'>
+<div id='frontend' class='parallax'>
   <div>
     <h1>Frontend</h1>
   </div>
 </div>
 
 <section class='content'>
+
   <div class='container-fluid'>
     <div class='section-description'>
       <p>Let's talk about frontend stuff</p>
     </div>
-    <div class='project'>
-      <h2>Project 1</h2>
-      <p>description</p>
-    </div>
-    <div class='project'>
-      <h2>Project 2</h2>
-      <p>description</p>
-    </div>
-    <div class='project'>
-      <h2>Project 3</h2>
-      <p>description</p>
+    <ul class='projects clearfix'>
+      {% for project in frontend_projects %}
+      <li class='project container'>
+        <h2>{{project.name}}</h2>
+        <div class='row'>
+          <p class='col-md-8'>{{project.description}}</p>
+          <img class='col-xs-3' src="{{project.image}}"/>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
     </div>
   </div>
 
 </section>
 
-
-<div class='parallax'>
+<div id='backend' class='parallax'>
   <div>
     <h1>Backend</h1>
   </div>
@@ -63,15 +62,17 @@
     <div class='section-description'>
       <p>Let's talk about backend stuff</p>
     </div>
-    <div class='project'>
-      <h2>Project 1</h2>
-    </div>
-    <div class='project'>
-      <h2>Project 2</h2>
-    </div>
-    <div class='project'>
-      <h2>Project 3</h2>
-    </div>
+    <ul class='projects'>
+      {% for project in backend_projects %}
+      <li class='project container'>
+        <h2>{{project.name}}</h2>
+        <div class='row'>
+          <p class='col-md-8'>{{project.description}}</p>
+          <img class='col-xs-3' src="{{project.image}}"/>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
