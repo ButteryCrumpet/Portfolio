@@ -5,9 +5,9 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i" rel="stylesheet">
 
 
-<header class='nav navbar-inverse navbar-static-top' role='navigation'>
+<header class='nav navbar-inverse' role='navigation'>
     <div class='navbar-header'>
-      <a href='#' class='nav navbar-brand'>Me</a>
+      <a href='/home/' class='nav navbar-brand'>Me</a>
     </div>
     <ul class='nav navbar-nav navbar-right'>
       <li><a href='#'>About Me</a></li>
@@ -20,6 +20,7 @@
   <div id='welcome-message'  class='col-md-10 col-md-offset-2'>
     <h1>PanDev</h1>
     <p class='lead'>Pan-development. Fullstack developer</p>
+    <button type='button' class='btn btn-success'>More about me</button>
   </div>
 </section>
 
@@ -33,14 +34,17 @@
 
   <div class='container-fluid'>
     <div class='section-description'>
-      <p>Let's talk about frontend stuff</p>
+      <p>Let's talk about frontend stuff</p> <!-- centre it -->
     </div>
     <ul class='projects clearfix'>
       {% for project in frontend_projects %}
       <li class='project container'>
         <h2>{{project.name}}</h2>
         <div class='row'>
-          <p class='col-md-8'>{{project.description}}</p>
+          <div class='col-md-8'>
+            <em>{{project.languages}}</em>
+            <p class=>{{project.description}}</p>
+          </div>
           <img class='col-xs-3' src="{{project.image}}"/>
         </div>
       </li>
@@ -67,7 +71,10 @@
       <li class='project container'>
         <h2>{{project.name}}</h2>
         <div class='row'>
-          <p class='col-md-8'>{{project.description}}</p>
+          <div class='col-md-8'>
+            <em>{{project.languages}}</em>
+            <p class=>{{project.description}}</p>
+          </div>
           <img class='col-xs-3' src="{{project.image}}"/>
         </div>
       </li>
@@ -76,11 +83,25 @@
   </div>
 </section>
 
-<div class='parallax'>
+<div id='coding' class='parallax'>
   <div>
     <h1>--</h1>
   </div>
 </div>
+
+<section>
+  <div class='container-fluid'>
+    <div class='section-description'>
+      <p>Description?</p>
+    </div>
+    <div class='row'>
+      <div class='col-md-3'><h2>Coding Project</h2></div>
+      <div class='col-md-3'><h2>Coding Project</h2></div>
+      <div class='col-md-3'><h2>Coding Project</h2></div>
+      <div class='col-md-3'><h2>Coding Project</h2></div>
+    </div>
+  </div>
+</section>
 
 <div class='footer'>
   <div class='container'>

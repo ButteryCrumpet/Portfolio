@@ -4,6 +4,7 @@ html, body {
   position: relative;
   min-height: 100%;
   margin:0;
+  background-color: #E5EFE3;
 }
 body {
   /* Margin bottom by footer height */
@@ -26,10 +27,11 @@ p, a {
   min-height:100%;/*for mozilla*/
 }
 
-.navbar-static-top {
+.navbar-inverse {
   position:absolute;
   background: transparent;
   width: 80vw;
+  color: white;
 }
 
 #fullscreen-home {
@@ -50,6 +52,10 @@ p, a {
 
 #backend {
   background-image: url(https://2.bp.blogspot.com/-QbtuODo_9Dw/VvBFDmQOorI/AAAAAAAAAHk/wSxISxtzFx48uLvlTnIxQiWdn7d1FNhZg/s1600/linux_file_system.png);
+}
+
+#coding {
+  background-image:  url(https://pbs.twimg.com/media/ClK5mndUsAAMT15.jpg);
 }
 
 .parallax {
@@ -77,13 +83,15 @@ p, a {
   height: 25%;
   border: 10px black;
 }
-
-.project img {
-
+/* eh not sure about this
+li.project {
+  border-top-color: #A9CCA3;
+  border-top-style: solid;
+  border-top-width: 2px;
 }
+*/
 
 .footer {
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 200px;
@@ -92,11 +100,3 @@ p, a {
   color: #efefef;
   background-color: #333;
 }
-.footer a {
-  color: #9af7fe;
-}
-
-
-a[ id= "frontend-link" ]:target ~ #frontend {
-    -webkit-transform: translateY( -1000px);
-    transform: translateY( -1000px );
