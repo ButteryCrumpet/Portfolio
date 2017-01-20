@@ -73,6 +73,9 @@ p, a {
 
 .section-description {
   height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects {
