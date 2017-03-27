@@ -24,11 +24,18 @@
     <ul class='projects clearfix'>
       {% for project in frontend_projects %}
       <li class='project container'>
-        <h2>{{project.name}}</h2>
         <div class='row'>
-          <div class='col-md-8'>
-            <em>{{project.languages}}</em>
-            <p class=>{{project.description}}</p>
+          <h2>{{project.name}}</h2>
+          <div class='col-xs-8'>
+            <p>
+                <i>
+                    {% for language in project.languages.all %}
+                    {{language.name}},
+                    {% endfor %}
+                </i>
+            </p>
+            <p>{{project.description}}</p>
+            <a href='{% url 'portHome:details' project.id %}'>See More</a> 
           </div>
           <img class='col-xs-3' src="{{project.image}}"/>
         </div>
@@ -54,11 +61,12 @@
     <ul class='projects'>
       {% for project in backend_projects %}
       <li class='project container'>
-        <h2>{{project.name}}</h2>
         <div class='row'>
-          <div class='col-md-8'>
+          <h2>{{project.name}}</h2>
+          <div class='col-xs-8'>
             <em>{{project.languages}}</em>
-            <p class=>{{project.description}}</p>
+            <p>{{project.description}}</p>
+            <a href='/details/{{project.id}}'>See More</a> 
           </div>
           <img class='col-xs-3' src="{{project.image}}"/>
         </div>

@@ -15,11 +15,11 @@ html>body .content {
 }
 
 h1,h2,h3 {
-  font-family: "Leto";
+  font-family: "Leto", Times;
 }
 
 p, a {
-  font-family: "Lora";
+  font-family: "Lora", Arial;
 }
 
 .content {
@@ -30,7 +30,7 @@ p, a {
 .navbar-inverse {
   position:absolute;
   background: transparent;
-  width: 80vw;
+  width: 95vw;
   color: white;
 }
 
@@ -46,6 +46,7 @@ p, a {
   color: white;
 }
 
+/*don't set image urls in css?*/
 #frontend {
   background-image: url(http://janeto.com/img/slides/responsive.jpg);
 }
@@ -102,4 +103,37 @@ li.project {
 .footer {
   color: #efefef;
   background-color: #333;
+}
+
+.centredBlock{
+  border-radius: 1%;
+  min-height: 80%;
+  background-color: #E5EFE3;
+  padding: 20px;
+}
+
+.detailTitle{
+  display: flex;
+  justify-content: center;
+}
+
+.detailImage{
+  border-radius: 1%;
+  border-style: solid;
+  border-color: grey;
+  padding: 0;
+}
+
+.detailImage img{
+  width: 100%;
+}
+
+.detailDescription{
+  margin-top: 30px;
+}
+
+#detail-row{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }

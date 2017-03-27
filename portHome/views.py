@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, AdditionalImage
 
 # Create your views here.
 def home(request):
@@ -9,3 +9,11 @@ def home(request):
 
 def about_me(request):
     return render(request, 'portHome/about_me.html')
+
+def project_details(request, project_id):
+    project = Project.objects.get(id=project_id)
+    try:
+        additionalImages = AdditionalImage.objects.get(project = project)
+    except AdditionalImage.DoesNotExist:
+        additionalImages = []
+    return render(request, 'portHome/details.html', {'project': project, 'images': additionalImages})
