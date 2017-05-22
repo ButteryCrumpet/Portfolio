@@ -96,6 +96,7 @@ p, a {
 }
 
 .project {
+  max-width: 75vw;
 }
 
 .footer {
