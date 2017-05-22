@@ -87,6 +87,12 @@ p, a {
 
 .projects {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .project {
