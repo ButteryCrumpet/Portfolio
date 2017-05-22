@@ -4,7 +4,8 @@
 <section id='fullscreen-home' class='content'>
   <div id='welcome-message'  class='col-md-10 col-md-offset-2'>
     <h1>PanDev</h1>
-    <p class='lead'>Pan-development. Fullstack developer</p>
+    <p class='lead'>Pan-development.</p>
+    <p class='lead'>A silly name, I need to get some panda pictures in here</p>
     <a href="{% url 'portHome:about' %}" type='button' class='btn btn-success'>More about me</a>
   </div>
 </section>
@@ -19,7 +20,10 @@
 
   <div class='container-fluid'>
     <div class='section-description'>
-      <p>Let's talk about frontend stuff</p> <!-- centre it -->
+      <p>
+        A selection of projects, mostly messy and incomplete <br>
+        I do my best to add as I can when I have time.
+      </p> <!-- centre it -->
     </div>
     <ul class='projects clearfix'>
       {% for project in projects %}
@@ -38,7 +42,7 @@
             <a href='{project.git_link}'>GitHub</a>
           </div>
           <div class='col-xs-3 col-xs-offset-1 detailImage'>
-            <a href='{% url 'portHome:details' project.id %}'>
+            <a href='{% project.link %}'>
               <img class='projectImage' src="{{project.image}}"/>
             </a>
           </div>
