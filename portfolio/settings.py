@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '622*uzl$pt&q)p^x$p7nt-prk71t0%1am_%bonlexz3*v@r@$l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cryptic-woodland-99683.herokuapp.com', '127.0.0.1']
 
