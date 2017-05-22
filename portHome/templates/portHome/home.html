@@ -11,7 +11,7 @@
 
 <div id='frontend' class='parallax'>
   <div>
-    <h1>Frontend</h1>
+    <h1>Projects</h1>
   </div>
 </div>
 
@@ -22,22 +22,26 @@
       <p>Let's talk about frontend stuff</p> <!-- centre it -->
     </div>
     <ul class='projects clearfix'>
-      {% for project in frontend_projects %}
+      {% for project in projects %}
       <li class='project container'>
         <div class='row'>
           <h2>{{project.name}}</h2>
           <div class='col-xs-8'>
             <p>
-                <i>
-                    {% for language in project.languages.all %}
-                    {{language.name}},
-                    {% endfor %}
-                </i>
+              <i>
+                {% for technology in project.technologies.all %}
+                {{technoloy.name}},
+                {% endfor %}
+              </i>
             </p>
             <p>{{project.description}}</p>
-            <a href='{% url 'portHome:details' project.id %}'>See More</a> 
+            <a href='{project.git_link}'>GitHub</a>
           </div>
-          <img class='col-xs-3' src="{{project.image}}"/>
+          <div class='col-xs-3 col-xs-offset-1 detailImage'>
+            <a href='{% url 'portHome:details' project.id %}'>
+              <img class='projectImage' src="{{project.image}}"/>
+            </a>
+          </div>
         </div>
       </li>
       {% endfor %}
@@ -45,55 +49,6 @@
     </div>
   </div>
 
-</section>
-
-<div id='backend' class='parallax'>
-  <div>
-    <h1>Backend</h1>
-  </div>
-</div>
-
-<section class='content'>
-  <div class='container-fluid'>
-    <div class='section-description'>
-      <p>Let's talk about backend stuff</p>
-    </div>
-    <ul class='projects'>
-      {% for project in backend_projects %}
-      <li class='project container'>
-        <div class='row'>
-          <h2>{{project.name}}</h2>
-          <div class='col-xs-8'>
-            <em>{{project.languages}}</em>
-            <p>{{project.description}}</p>
-            <a href='/details/{{project.id}}'>See More</a> 
-          </div>
-          <img class='col-xs-3' src="{{project.image}}"/>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<div id='coding' class='parallax'>
-  <div>
-    <h1>--</h1>
-  </div>
-</div>
-
-<section>
-  <div class='container-fluid'>
-    <div class='section-description'>
-      <p>Description?</p>
-    </div>
-    <div class='row'>
-      <div class='col-md-3'><h2>Coding Project</h2></div>
-      <div class='col-md-3'><h2>Coding Project</h2></div>
-      <div class='col-md-3'><h2>Coding Project</h2></div>
-      <div class='col-md-3'><h2>Coding Project</h2></div>
-    </div>
-  </div>
 </section>
 
 {% endblock %}

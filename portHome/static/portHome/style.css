@@ -15,11 +15,12 @@ html>body .content {
 }
 
 h1,h2,h3 {
-  font-family: "Leto", Times;
+  font-family: Arial;
 }
 
 p, a {
-  font-family: "Lora", Arial;
+  font-family: Arial;
+  font-size: 1.5em;
 }
 
 .content {
@@ -28,10 +29,24 @@ p, a {
 }
 
 .navbar-inverse {
-  position:absolute;
+  position:fixed;
   background: transparent;
-  width: 95vw;
+  width: 100vw;
   color: white;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  text-shadow:
+    -1px -1px 0 grey;
+}
+
+.navbar-right{
+  margin-right: 10px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 grey;
 }
 
 #fullscreen-home {
@@ -51,19 +66,10 @@ p, a {
   background-image: url(http://janeto.com/img/slides/responsive.jpg);
 }
 
-#backend {
-  background-image: url(https://2.bp.blogspot.com/-QbtuODo_9Dw/VvBFDmQOorI/AAAAAAAAAHk/wSxISxtzFx48uLvlTnIxQiWdn7d1FNhZg/s1600/linux_file_system.png);
-}
-
-#coding {
-  background-image:  url(https://pbs.twimg.com/media/ClK5mndUsAAMT15.jpg);
-}
-
 .parallax {
   background-attachment: fixed;
   background-size: cover;
 
-  /*centres content perfectly with flexing */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,18 +93,10 @@ p, a {
   height: 25%;
   border: 10px black;
 }
-/* eh not sure about this
-li.project {
-  border-top-color: #A9CCA3;
-  border-top-style: solid;
-  border-top-width: 2px;
-}
-*/
 
 .footer {
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 200px;
+  min-height: 200px;
 }
 .footer {
   color: #efefef;
@@ -124,6 +122,10 @@ li.project {
   padding: 0;
 }
 
+.detailImage:hover{
+  border-color: black;
+}
+
 .detailImage img{
   width: 100%;
 }
@@ -136,4 +138,26 @@ li.project {
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.flexBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+#aboutMe {
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+#aboutMe p {
+  width: 50vw;
+}
+
+#aboutMe img {
+  margin-right: 5vw;
 }

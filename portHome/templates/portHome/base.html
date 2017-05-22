@@ -7,21 +7,23 @@
 
 <header class='nav navbar-inverse' role='navigation'>
     <div class='navbar-header'>
-      <a href="{% url 'portHome:home'  %}" class='nav navbar-brand'>Pandavelop</a>
+      <a href="{% url 'portHome:home'  %}" class='nav navbar-brand'>Pandevelop</a>
     </div>
     <ul class='nav navbar-nav navbar-right'>
       <li><a href="{% url 'portHome:about' %}">About Me</a></li>
-      <li><a href='#'>Projects</a></li>
-      <li><a href='#'>Contact</a></li>
+      <li><a href="#frontend">Projects</a></li>
+      <li><a href="#footer_target">Contact</a></li>
     </ul>
 </header>
 
  {% block content %}
  {% endblock %}
 
- <div class='footer'>
+ <div class='footer' id='footer_target'>
    <div class='container'>
      <h3>Contact</h3>
-     <p>email etc</p>
+     <p>Uni email: b1310321@gl.aiu.ac.jp</p>
+     <p>Personal email: bumpetycrumpety@gmail.com</p>
+     <p>Tel: 080-5562-7260</p>
    </div>
  </div>

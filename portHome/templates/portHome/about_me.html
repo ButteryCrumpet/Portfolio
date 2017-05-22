@@ -1,7 +1,36 @@
 {% extends 'portHome/base.html' %}
 {% block content %}
+{% load static %}
 
-<div class='centredBlock'>
-    <h1>About Me</h1>
+<div class='centredBlock flexBox' id='aboutMe'>
+    <img src='https://avatars2.githubusercontent.com/u/19530989?v=3&s=460'/>
+    <div>
+      <h1>About Me</h1>
+      <p>
+      My name is Simon Leigh. Originally from Newcastle, England, I have always taken
+      and unconventional route through life in order to keep challenging myself. <br>
+      After years of high level sports I needed a fresh challenge and choose to study
+      Japanese in university. Two years in I took a gap-year during which time I moved
+      to Japan and worked teaching English first in Shizuoka before moving to Kawasaki,
+      Kanagawa for most of the year. <br>
+      I then came to Akita International University where I transferred into their Global
+      Studies program, mainly studying Political Science with a peripheral focus on media. <br>
+      I have been programming as a hobby for a couple of years in the little free time I have.
+      Managing to become relatively proficient in Python and Javascript along with a pretty
+      successful foray into C#. <br>
+      I still have much to learn and am always looking to take my skills to the next level. <br>
+      </p>
+      <h4>TODO:</h4>
+      <ul>
+        <li>Style portfolio so it doesn't look like garbage</li>
+        <li>Add more detailed description for projects</li>
+        <li>Write Docs for recipe API project</li>
+        <li>So many more...</li>
+      </ul>
+      <div>
+        <a href='https://github.com/ButteryCrumpet' target='_blank'><h4>My GitHub<h4></a>
+        <a href="{% static 'portHome/SimonLeighResume.pdf' %}" target='_blank'><h4>My Resume</h4></a>
+      </div>
+    </div>
 </div>
 {% endblock %}
