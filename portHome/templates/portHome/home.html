@@ -34,7 +34,7 @@
             <p>
               <i>
                 {% for technology in project.technologies.all %}
-                {{technology.name}},
+                {{technology.name}}{% if not forloop.last %},{% endif %}
                 {% endfor %}
               </i>
             </p>
