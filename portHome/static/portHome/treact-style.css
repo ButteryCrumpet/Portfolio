@@ -20,9 +20,16 @@ ul {
   align-items: center;
 }
 
-#search-list li {
+#search-list>li {
   display: inline-block;
   padding: 16px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #search-list>li {
+    width: 40%;
+  }
 }
 
 #search-bar {

@@ -1,13 +1,8 @@
-/* Sticky footer styles stolen from codeschool
--------------------------------------------------- */
 html, body {
   position: relative;
   min-height: 100%;
   margin:0;
   background-color: #E5EFE3;
-}
-body {
-  /* Margin bottom by footer height */
 }
 
 html>body .content {
@@ -29,8 +24,8 @@ p, a {
 }
 
 .navbar-inverse {
-  position:fixed;
-  background: transparent;
+  position: fixed;
+  background-color: transparent/*rgba(43,49,24,0.5)*/;
   width: 100vw;
   color: white;
   z-index: 1000;
@@ -38,15 +33,11 @@ p, a {
 
 .navbar-brand {
   font-size: 1.5em;
-  text-shadow:
-    -1px -1px 0 grey;
 }
 
 .navbar-right{
   margin-right: 10px;
   color: white;
-  text-shadow:
-    -1px -1px 0 grey;
 }
 
 #fullscreen-home {
@@ -61,7 +52,6 @@ p, a {
   color: white;
 }
 
-/*don't set image urls in css?*/
 #frontend {
   background-image: url(http://janeto.com/img/slides/responsive.jpg);
 }
@@ -102,8 +92,6 @@ p, a {
 .footer {
   width: 100%;
   min-height: 200px;
-}
-.footer {
   color: #efefef;
   background-color: #333;
 }
@@ -159,10 +147,22 @@ p, a {
   margin-bottom: 5vh;
 }
 
-#aboutMe p {
+#details {
   width: 50vw;
+}
+
+@media only screen and (min-width: 1073px){
+  #details {
+    margin-top: 5vh;
+  }
 }
 
 #aboutMe img {
   margin-right: 5vw;
+}
+
+@media only screen and (max-width: 1073px) {
+  #aboutMe img {
+    margin-top: 5vh;
+  }
 }
