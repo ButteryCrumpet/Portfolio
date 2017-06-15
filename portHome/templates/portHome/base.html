@@ -3,16 +3,34 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 <link rel="stylesheet" href="{% static 'portHome/style.css' %}" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i" rel="stylesheet">
-
+<script src="{% static "portHome/jquery-3.2.1.min.js" %}"></script>
 
 <header class='nav navbar-inverse' role='navigation'>
     <div class='navbar-header'>
-      <a href="{% url 'portHome:home'  %}" class='nav navbar-brand'>Pandevelop</a>
+      <a href=
+      {% if page == 'home' %}
+        "#fullscreen-home"
+      {% else %}
+        "{% url 'portHome:home' %}"
+      {% endif %}
+      class='nav navbar-brand'>Pandevelop</a>
     </div>
     <ul class='nav navbar-nav navbar-right'>
       <li><a href="{% url 'portHome:about' %}">About Me</a></li>
-      <li><a href="#frontend">Projects</a></li>
-      <li><a href="#footer_target">Contact</a></li>
+      <li><a href=
+        {% if page == 'home' %}
+        "#frontend"
+        {% else %}
+        "{% url 'portHome:home' %}#frontend"
+        {% endif %}
+        >Projects</a></li>
+      <li><a href=
+        {% if page == 'home' %}
+        "#footer_target"
+        {% else %}
+        "{% url 'portHome:home' %}#footer_target"
+        {% endif %}
+        >Contact</a></li>
     </ul>
 </header>
 
@@ -23,7 +41,9 @@
    <div class='container'>
      <h3>Contact</h3>
      <p>Uni email: b1310321@gl.aiu.ac.jp</p>
-     <p>Personal email: crumpetybumpety@gmail.com</p>
+     <p>Personal email: bumpetycrumpety@gmail.com</p>
      <p>Tel: 080-5562-7260</p>
    </div>
  </div>
+
+ <script src="{% static "portHome/smoothscroll.js" %}"></script>
